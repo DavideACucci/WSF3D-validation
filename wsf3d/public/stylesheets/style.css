@@ -1,0 +1,171 @@
+/**
+BSD 3-Clause License
+
+Copyright (c) 2020, MindEarth
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+body, html {
+    background: #2b2d42;
+    height: 90vh;
+    width: 100vw;
+    
+    margin:0px;
+    padding:0px;
+
+    font-family: Nunito;  
+
+    position:absolute;/* this is very important*/
+    bottom:0;
+    top:0;
+    right:0;
+    left:0;  
+}
+
+#wrapper {
+   
+    color: #edf2f4;
+
+    height:100%;
+
+    display: grid;
+    grid-template-rows: 80px 80px 1fr 60px 0.8fr;
+
+    grid-row-gap: 5px; 
+
+    font-size: 30pt;
+}
+
+#navBar {
+    background: #edf2f4;    
+
+    display: grid;
+    grid-template-columns: 200px 200px 1fr 200px;
+
+    padding: 5px;
+}
+
+#navBar div {
+    text-align: center;
+
+    /*height: 100%;*/
+}
+
+#headerBar {
+    background: #8d99ae;
+    padding: 5px;
+
+    display:flex;
+    justify-content: space-between;
+    align-items:center;    
+}
+
+#navBar img {    
+    height: 70px;
+}
+
+#title {
+/*    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100%;
+    font-size: 30pt;
+*/
+    display: inline-block;
+}
+
+#title div {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#title img {
+    height:100px;
+}
+
+#title h1 {
+    font-size: 50pt;
+    font-weight: bold;
+}
+
+#title h1 {
+    font-size: 40pt;
+    font-weight: bold;
+}
+
+
+#buttons  {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-column-gap: 5px;
+    grid-row-gap: 5px; 
+}
+
+.button {
+    background: #8d99ae;
+
+    text-align: center;
+    border:  solid #edf2f4 2px;
+/*    display: table-cell;
+    vertical-align: middle;*/    
+}
+
+.buttonText {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100%;
+    font-size: 3vh;
+}
+
+.buttonRow {
+    grid-column-start: 1; 
+    grid-column-end: 4; 
+}
+
+.button {
+
+}
+
+a:link {
+  color: #d90429;
+}
+
+a:normal {
+  color: #d90429;
+}
+
+a:visited {
+  color: #d90429;
+}
+
+a:hover {
+  color: #d90429;
+}

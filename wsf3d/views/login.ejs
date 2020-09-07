@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+ <html>
+  <head>    
+    <title>WSF-3D</title>
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <link rel='stylesheet' href='/stylesheets/login.css' />
+
+  </head>
+  <body>
+    
+    <div id="wrapper" >
+      <% include navbar.ejs %>
+
+      <div></div>      
+
+      <div id="title">
+        <div>
+          <h1>WSF3D validation</h1>
+        </div>
+        <div>
+          Download the most recent version <br> of your device Internet browser
+        </div>
+        <div>
+          <a href="https://www.google.com/chrome/"><img src="/images/chrome_logo.png"/></a>
+          <a href="https://www.mozilla.org/en-US/firefox/"><img src="/images/firefox_logo.png"/></a>
+          <a href="https://www.apple.com/safari/"><img src="/images/safari_logo.png"/></a>
+        </div>
+      </div>
+
+      <div></div>      
+
+      <div id="login">        
+
+        <form action="auth" method="post">
+          <div class="container">
+            <label for="uname">Username</label>
+            <input type="text" placeholder="Enter Username" name="uname" required/>
+
+            <label for="psw">Password</label>
+            <input type="password" placeholder="Enter Password" name="psw" required/>
+
+            <button type="submit">Login</button>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>    
+   
+  </body>
+</html>

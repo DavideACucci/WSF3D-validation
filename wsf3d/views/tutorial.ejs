@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+ <html>
+  <head>    
+    <title>WSF-3D</title>
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/tutorial.css' />
+
+  </head>
+  <body>
+    
+    <div id="wrapper-tutorial" >
+      <% include navbar.ejs %>
+
+      <% include headerbar.ejs %>
+
+      <div id="tutorial-image">
+        <img src="/images/tutorial/tut_<%= page %>.jpg"/>
+      </div>      
+
+      <div id="tutorial-text">        
+
+      </div>  
+
+      <div id="buttons-tutorial">
+        <!-- <div class="button" id="button-back" onClick><div class="buttonText">Home</div></div> -->
+        <div class="button" id="button-prev" onClick><div class="buttonText">Previous</div></div>
+        <div class="button" id="button-next" onClick><div class="buttonText">Next</div></div>
+      </div> 
+
+      <script src="/javascripts/Functions.js"></script> 
+      <script type="text/javascript">
+        
+        var tutorial_strings = [
+          `<h1>After finished this guide<br>click "Start" in the home page</h1>
+           <h2>The tasks will appear one after the other.</h2>`,
+          `<h1>You should click on the TALLEST building in view</h1>
+           <h2>Click on the center of it</h2>`,
+          `<h1>Anything built counts even if it is incomplete</h1>
+           <h2>Click on the center of it</h2>`,
+          `<h1>The building might be partially hidden</h1>
+           <h2>Click on it and not on the ones in the foreground</h2>`,
+          `<h1>If you don't see the entire building <br> GUESS where the center is</h1>
+           <h2>This will help us locating the building</h2>`,
+          `<h1>Pay attention!<br>The building can be small</h1>
+           <h2></h2>`,
+          `<h1>But if they are VERY, VERY far, <b>ignore them</b></h1>
+           <h2>Here you should click on the near one instead, 2 floors</h2>`,
+          `<h1>Next, count how many entire FLOORS you see<br>and click on the corresponding button</h1>
+           <h2>This will allow us to determine the approximate height of the building</h2>`,
+          `<h1>If you don't see the entire building<br>count the hidden floors as well</h1>
+           <h2>You should GUESS how many floors you don't see</h2>`,
+          `<h1>If you can't answer<br>then click the "Skip" button</h1>
+           <h2>In this image the buildings are hidden by a tree</h2>`,
+          `<h1>Objects may cover the view to the buildings</h1>
+           <h2>In this case we see a building but we cannot tell the number of floors</h2>`,
+          `<h1>Few images may be completely covered</h1>
+           <h2>In this case just skip those</h2>`,
+          `<h1>In any case, if unsure, better to skip the image<br>Use the last button very rarely.</h1>
+           <h2>We will look at those images and verify.</h2>`,
+          `<h1>The tutorial is over<br><a href="/task">Start!</a></h1>
+           <h2></h2>`,
+        ];
+
+        text_elem = document.getElementById('tutorial-text');
+        text_elem.innerHTML = tutorial_strings[parseInt( <%= page %> )-1];
+
+        console.log(tutorial_strings[parseInt( <%= page %> )-1]);
+
+
+        // var back_elem = document.getElementById('button-back');
+
+        // back_elem.addEventListener('click', 
+        //     function(event) {
+        //     buttonClick(event, function() {                    
+        //         window.location.replace('/');
+        //     });
+        // });
+
+        var next_elem = document.getElementById('button-next');
+
+        next_elem.addEventListener('click', 
+            function(event) {
+            buttonClick(event, function() {                    
+                window.location.replace('/tutorial/<%= Math.min(14,parseInt(page)+1) %>');
+            });
+        });
+
+        var prev_elem = document.getElementById('button-prev');
+
+        prev_elem.addEventListener('click', 
+            function(event) {
+            buttonClick(event, function() {                    
+                window.location.replace('/tutorial/<%= Math.max(1,parseInt(page)-1) %>');
+            });
+        });
+      </script>
+
+    </div>    
+   
+  </body>
+</html>

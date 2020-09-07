@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+ <html>
+  <head>    
+    <title>WSF-3D</title>
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/stats.css' />
+
+  </head>
+  <body>
+    
+    <div id="wrapper" >
+      <% include navbar.ejs %>
+
+      <% include headerbar.ejs %>
+
+      <div id="stats">
+        <div>Today you've solved</div>
+        <div><b><%= cnt1 %></b> tasks in: <b><%= Math.ceil(sum1/60) %> min</b></div>
+
+        <div>In total you've solved </div>
+        <div><b><%= cnt2 %></b> tasks in <b><%= Math.floor(sum2/3600) %> h and <%= Math.ceil((sum2-Math.floor(sum2/3600)*3600)/60) %> min</b></div>
+      </div>
+
+      <div></div>
+
+      <div id="buttons">
+        <div class="button buttonRow" id="button-back" onClick><div class="buttonText">Back</div></div>
+      </div>
+
+      <script src="/javascripts/Functions.js"></script> 
+      <script src="/javascripts/StatsLogic.js"></script>
+
+    </div>    
+   
+  </body>
+</html>

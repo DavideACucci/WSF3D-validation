@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+ <html>
+  <head>    
+    <title>WSF-3D</title>
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+  </head>
+  <body>
+    
+    <div id="wrapper" >
+      <% include navbar.ejs %>
+
+      <% include headerbar.ejs %>
+
+      <div id="title">
+        <div><h1>WSF-3D validation</h1></div>
+        <div>This project aims at generating validation data<br>for the <b>World Settlement Footprint 3D product</b></div>
+        <div>The WSF-3D provides an estimate <br> of <b>the height of the human-made structures</b> <br>at an unprecedented 12x12 m resolution</div>
+        <div>If this product is accurate, we can study it <br>to learn, model and predict <br> the structure of the cities and their evolution</div>
+
+      </div>      
+
+      <div></div>      
+
+      <div id="buttons">
+        <div class="button buttonRow" id="button-tutorial" onClick><div class="buttonText">Learn</div></div>
+        <div class="button buttonRow" id="button-start"><div class="buttonText">Start</div></div>
+        <div class="button buttonRow" id="button-stats"><div class="buttonText">User's statistics</div></div>
+      </div>
+
+      <script src="/javascripts/Functions.js"></script> 
+      <script src="/javascripts/HomeLogic.js"></script>
+
+    </div>    
+   
+  </body>
+</html>
